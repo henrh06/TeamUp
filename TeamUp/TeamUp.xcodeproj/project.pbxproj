@@ -460,6 +460,7 @@
 				AF509DCB17FB49B10083B3D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AF509DCC17FB49B10083B3D4 /* Build configuration list for PBXNativeTarget "TeamUpTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +469,7 @@
 				AF509DCE17FB49B10083B3D4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
