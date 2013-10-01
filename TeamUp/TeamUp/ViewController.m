@@ -18,6 +18,12 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
+    
+    Worker *w = [Worker alloc];
+    
+    [w openDB];
+    
+    [w createTable:@"Players" f1:@"FirstName" f2:@"SecondName" f3:@"Position" f4:@"Number" f5:@"Rating"];
 }
 
 - (void)didReceiveMemoryWarning
