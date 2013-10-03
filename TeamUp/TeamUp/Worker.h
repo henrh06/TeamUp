@@ -18,4 +18,6 @@
 
 - (void) openDB;
 
+-(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating;
+
 @end

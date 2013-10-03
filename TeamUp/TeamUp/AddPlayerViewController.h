@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Worker.h"
 
 @interface AddPlayerViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate> {
     
@@ -16,9 +17,6 @@
     IBOutlet UIPickerView *picker;
     IBOutlet UIStepper *stepper;
     
-   
-    
-
 }
 
 @property(nonatomic, retain) IBOutlet UILabel *rating;
