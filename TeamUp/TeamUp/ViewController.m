@@ -26,6 +26,13 @@
     [w createTable:@"Players" f1:@"FirstName" f2:@"SecondName" f3:@"Position" f4:@"Number" f5:@"Rating"];
 }
 
+-(IBAction)goToPlayer {
+    
+    PlayersViewController *screen = [[PlayersViewController alloc]initWithNibName:Nil bundle:Nil];
+    screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:screen animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

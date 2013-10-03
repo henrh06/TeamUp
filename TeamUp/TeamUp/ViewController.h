@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Worker.h"
+#import "PlayersViewController.h"
 @interface ViewController : UIViewController {
     
     
 }
+
+-(IBAction)goToPlayer;
 
 @end

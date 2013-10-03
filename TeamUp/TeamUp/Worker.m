@@ -18,7 +18,7 @@
     char *err;
     
     NSString *sql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
-                                                "TEXT, '%@' TEXT, '%@' TEXT, '%@' TEXT, '%@' TEXT);", TableName,field1,field2,field3,field4,field5];
+                                                "TEXT, '%@' TEXT, '%@' TEXT, '%@' DOUBLE, '%@' DOUBLE);", TableName,field1,field2,field3,field4,field5];
     
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err)
         != SQLITE_OK) {
