@@ -14,6 +14,9 @@
     
 }
 
+@property(nonatomic, retain)IBOutlet UILabel *nrPlayers;
+@property(nonatomic, retain)IBOutlet UILabel *rating;
+
 -(IBAction)goToPlayer;
 
 @end

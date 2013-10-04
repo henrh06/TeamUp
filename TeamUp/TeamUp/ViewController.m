@@ -13,6 +13,7 @@
 @end
 
 @implementation ViewController
+@synthesize rating, nrPlayers;
 
 - (void)viewDidLoad
 {
@@ -24,6 +25,10 @@
     [w openDB];
     
     [w createTable:@"Players" f1:@"FirstName" f2:@"SecondName" f3:@"Position" f4:@"Number" f5:@"Rating"];
+    
+    nrPlayers.text = [NSString stringWithFormat:@"%d",[w getNumberOfPlayers]];
+    [w openDB];
+    rating.text = [NSString stringWithFormat:@"%d",[w returnTotalRating]];
 }
 
 -(IBAction)goToPlayer {

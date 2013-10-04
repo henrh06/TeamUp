@@ -34,6 +34,16 @@
                                    action:@selector(dismissKeyboard)];
     
     [self.view addGestureRecognizer:tap];
+    
+    stepper.maximumValue = 10;
+    stepper.minimumValue = 0;
+    
+}
+
+- (IBAction)stepperValueChanged:(UIStepper *)sender
+{
+    int value = sender.value;
+    rating.text = [NSString stringWithFormat:@"%d", value];
 }
 
 -(void)dismissKeyboard {

@@ -23,6 +23,7 @@
 @property(nonatomic, retain) NSArray *positions;
 
 -(IBAction)savePlayer;
+- (IBAction)stepperValueChanged:(UIStepper *)sender;
 
 
 @end

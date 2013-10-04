@@ -10,6 +10,59 @@
 
 @implementation Worker
 
+-(int)returnTotalRating {
+    
+    const char* sqlStatement = "SELECT SUM(Rating) AS TOTAL FROM Players";
+    sqlite3_stmt *statement;
+    
+    int rating = 0;
+    int devider = 0;
+    
+    if( sqlite3_prepare_v2(db, sqlStatement, -1, &statement, NULL) == SQLITE_OK )
+    {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            rating =  sqlite3_column_int(statement, 0);
+            
+        }
+    }else {
+        
+        NSLog(@"Couldnt summarize rating");
+    }
+    
+    sqlite3_finalize(statement);
+    sqlite3_close(db);
+    
+    [self openDB];
+    devider = [self getNumberOfPlayers];
+    
+    rating = rating/devider;
+    
+    return rating;
+}
+
+-(int)getNumberOfPlayers {
+    
+    int count = 0;
+
+        const char* sqlStatement = "SELECT COUNT(*) FROM Players";
+        sqlite3_stmt *statement;
+        
+        if( sqlite3_prepare_v2(db, sqlStatement, -1, &statement, NULL) == SQLITE_OK )
+        {
+            //Loop through all the returned rows (should be just one)
+            while( sqlite3_step(statement) == SQLITE_ROW )
+            {
+                count = sqlite3_column_int(statement, 0);
+            }
+        
+        // Finalize and close database.
+        sqlite3_finalize(statement);
+        sqlite3_close(db);
+    }
+    
+    return count;
+}
+
 -(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating {
     
     NSString *sql = [NSString stringWithFormat:@"INSERT INTO Players ('FirstName','SecondName','Position','Number','Rating') VALUES ('%@','%@','%@','%d','%d')",FirstName,LastName,position,mobileNr,rating];
