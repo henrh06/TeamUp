@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Worker.h"
+#import "PlayersViewController.h"
 
 @interface AddPlayerViewController : UIViewController <UIPickerViewDataSource,UIPickerViewDelegate> {
     

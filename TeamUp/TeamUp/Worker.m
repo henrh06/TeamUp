@@ -97,7 +97,7 @@
         
     } else {
             
-            NSLog(@"Table created");
+            NSLog(@"Table createation method run successfully. Doesnt mean a new table was created.");
             
     }
 }

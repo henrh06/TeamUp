@@ -38,6 +38,7 @@
     stepper.maximumValue = 10;
     stepper.minimumValue = 0;
     
+    mr.keyboardType = UIKeyboardTypeNumberPad;
 }
 
 - (IBAction)stepperValueChanged:(UIStepper *)sender
@@ -107,7 +108,9 @@
     
     [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedPosition mr:mobile r:rat];
     
-    
+    PlayersViewController *screen = [[PlayersViewController alloc]initWithNibName:Nil bundle:Nil];
+    screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:screen animated:YES completion:nil];
 
 }
 

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF037FF517FF4556001BBB06 /* manageplayersbutton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF037FF317FF4556001BBB06 /* manageplayersbutton.jpg */; };
+		AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF037FF717FF4604001BBB06 /* manageteambutton.jpg */; };
 		AF33A5DC17FB531B00326520 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */; };
 		AF33A5DE17FB532500326520 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DD17FB532500326520 /* libsqlite3.dylib */; };
 		AF33A5E117FB540200326520 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33A5E017FB540200326520 /* Worker.m */; };
@@ -45,6 +47,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF037FF317FF4556001BBB06 /* manageplayersbutton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manageplayersbutton.jpg; sourceTree = "<group>"; };
+		AF037FF717FF4604001BBB06 /* manageteambutton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manageteambutton.jpg; sourceTree = "<group>"; };
 		AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AF33A5DD17FB532500326520 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AF33A5DF17FB540200326520 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
@@ -193,6 +197,8 @@
 		AF712CB117FDED21003A7A74 /* Imgages */ = {
 			isa = PBXGroup;
 			children = (
+				AF037FF717FF4604001BBB06 /* manageteambutton.jpg */,
+				AF037FF317FF4556001BBB06 /* manageplayersbutton.jpg */,
 				AF712CBD17FDFA73003A7A74 /* buttonbg.jpg */,
 				AF712CBB17FDF8C2003A7A74 /* createplayer.png */,
 				AF712CB417FDF1E2003A7A74 /* logo.png */,
@@ -280,8 +286,10 @@
 				AF712CBA17FDF61A003A7A74 /* AddPlayerViewController.xib in Resources */,
 				AF712CB317FDED37003A7A74 /* bg.jpg in Resources */,
 				AF712CBE17FDFA73003A7A74 /* buttonbg.jpg in Resources */,
+				AF037FF517FF4556001BBB06 /* manageplayersbutton.jpg in Resources */,
 				AF509DB317FB49B10083B3D4 /* Images.xcassets in Resources */,
 				AF712CB517FDF1E2003A7A74 /* logo.png in Resources */,
+				AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */,
 				AF712CBC17FDF8C2003A7A74 /* createplayer.png in Resources */,
 				AF712CB017FDEBA4003A7A74 /* PlayersViewController.xib in Resources */,
 				AF509DA517FB49B10083B3D4 /* InfoPlist.strings in Resources */,
