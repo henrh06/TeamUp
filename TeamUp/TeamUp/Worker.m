@@ -66,14 +66,14 @@
     [self openDB];
     devider = [self getNumberOfPlayers];
     
-    if (devider > 0) {
-        
-            rating = rating/devider;
-        
+    if (devider < 0) {
+        return rating / devider;
     }
     
-    
-    return rating;
+    else {
+        return 0;
+    }
+
 }
 
 -(int)getNumberOfPlayers {
