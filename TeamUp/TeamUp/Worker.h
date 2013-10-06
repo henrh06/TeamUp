@@ -8,11 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <sqlite3.h>
+#import "Player.h"
 
 @interface Worker : NSObject {
     
     sqlite3 *db;
 }
+
+- (NSArray *)getAllPlayersInList;
 
 - (void)createTable: (NSString *)TableName f1:(NSString *) field1 f2:(NSString *)field2 f3:(NSString *)field3 f4:(NSString *)field4 f5:(NSString *)field5;
 

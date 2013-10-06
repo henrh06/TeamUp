@@ -13,7 +13,7 @@
 @end
 
 @implementation AddPlayerViewController
-@synthesize positions, rating;
+@synthesize positions, rating, selectedRow;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,6 +39,7 @@
     stepper.minimumValue = 0;
     
     mr.keyboardType = UIKeyboardTypeNumberPad;
+    
 }
 
 - (IBAction)stepperValueChanged:(UIStepper *)sender
@@ -85,6 +86,7 @@
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row   inComponent:(NSInteger)component{
     
+    selectedRow = [positions objectAtIndex:row];
 }
 
 
@@ -95,18 +97,15 @@
     int rat = [rating.text intValue];
     int mobile = [mr.text intValue];
     
-    //Get picked position
-    NSInteger row;
-    NSArray *repeatPickerData;
-    UIPickerView *repeatPickerView;
-    row = [repeatPickerView selectedRowInComponent:0];
-    NSString *selectedPosition = [repeatPickerData objectAtIndex:row];
+  
+    
+    
     
     Worker *w = [[Worker alloc]init];
     
     [w openDB];
     
-    [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedPosition mr:mobile r:rat];
+    [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedRow mr:mobile r:rat];
     
     PlayersViewController *screen = [[PlayersViewController alloc]initWithNibName:Nil bundle:Nil];
     screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;

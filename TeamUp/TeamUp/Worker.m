@@ -10,6 +10,36 @@
 
 @implementation Worker
 
+- (NSArray *)getAllPlayersInList {
+    
+    NSMutableArray *a = [[NSMutableArray alloc]init];
+    
+    
+    const char* sqlStatement = "SELECT * FROM Players";
+    sqlite3_stmt *statement;
+    
+    
+    if( sqlite3_prepare_v2(db, sqlStatement, -1, &statement, NULL) == SQLITE_OK )
+    {
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            
+            Player *p = [[Player alloc]init];
+            p.firstName = [NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 0)];
+            p.LastName = [NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 1)];
+            p.position = [NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 2)];
+            p.number = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 3)]intValue];
+            p.rating = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 4)]intValue];
+            
+            [a addObject:p];
+        }
+    }else {
+        
+        NSLog(@"Couldnt read players into array from sql db");
+    }
+    
+    return a;    
+}
+
 -(int)returnTotalRating {
     
     const char* sqlStatement = "SELECT SUM(Rating) AS TOTAL FROM Players";
@@ -35,7 +65,12 @@
     [self openDB];
     devider = [self getNumberOfPlayers];
     
-    rating = rating/devider;
+    if (devider > 0) {
+        
+            rating = rating/devider;
+        
+    }
+    
     
     return rating;
 }

@@ -22,6 +22,7 @@
 
 @property(nonatomic, retain) IBOutlet UILabel *rating;
 @property(nonatomic, retain) NSArray *positions;
+@property(nonatomic, retain) NSString *selectedRow;
 
 -(IBAction)savePlayer;
 - (IBAction)stepperValueChanged:(UIStepper *)sender;

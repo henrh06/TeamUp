@@ -27,6 +27,42 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    int y = 100;
+    
+    Worker *w = [[Worker alloc]init];
+    [w openDB];
+    NSArray * a = [w getAllPlayersInList];
+    
+    for (Player * object in a) {
+        
+        NSString *f = object.firstName;
+        NSString *dev = @" ";
+        NSString *l = object.LastName;
+        NSString *f1 = [f stringByAppendingString:dev];
+        NSString *fullName = [f1 stringByAppendingString:l];
+        
+        
+        UIView *v = [[UIView alloc]initWithFrame:CGRectMake(0, y, self.view.frame.size.width, 100)];
+        UIColor *bg = [UIColor whiteColor];
+        v.backgroundColor = bg;
+        [self.view addSubview:v];
+        
+        UILabel *fn = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, v.frame.size.width -10, 30)];
+        fn.text = fullName;
+        [v addSubview:fn];
+        
+        UILabel *pos = [[UILabel alloc]initWithFrame:CGRectMake(5, 40, 100, 30)];
+        pos.text = object.position;
+        [v addSubview:pos];
+        
+        UILabel *rating = [[UILabel alloc]initWithFrame:CGRectMake(120, 40, 30, 30)];
+        rating.text = [NSString stringWithFormat:@"%d",object.rating];
+        [v addSubview:rating];
+        
+        y = y+100;
+        
+    }
 }
 
 -(IBAction)goToAdd {
