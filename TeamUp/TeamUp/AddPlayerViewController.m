@@ -27,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [savePlayerButton setEnabled:NO];
+    
     // Do any additional setup after loading the view from its nib.
     positions = [[NSArray alloc]initWithObjects:@"goalie",@"right back",@"left back",@"center",@"right winger",@"left winger", nil];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
@@ -50,19 +53,18 @@
 -(void)dismissKeyboard {
     
     if (fn.isFirstResponder) {
-        
         [fn resignFirstResponder];
     }
     
     if (ln.isFirstResponder) {
-        
         [ln resignFirstResponder];
     }
     
     if (mr.isFirstResponder) {
-        
         [mr resignFirstResponder];
     }
+    [savePlayerButton setEnabled:[self validateForm]];
+    
 }
 
 - (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -87,6 +89,43 @@
     
 }
 
+
+// Set the textfield background color to red if invalid
+- (IBAction)validateField:(UITextField *) field {
+    if ([self isFieldValid:field]) {
+        field.backgroundColor = [UIColor whiteColor];
+    }
+    else {
+        field.backgroundColor = [UIColor yellowColor];
+    }
+}
+
+- (IBAction)validateNumber:(id)sender {
+
+}
+
+// Return YES if text input is long enough
+-(BOOL)isFieldValid:(UITextField *) field {
+    return [field.text length] > 0;
+}
+
+
+// Loop all textfields and return YES if all are valid
+-(BOOL) validateForm {
+    NSMutableArray *mutableTFs = [[NSMutableArray alloc] init];
+    for (UIView *view in [self.view subviews]) {
+        if ([view isKindOfClass:[UITextField class]]) {
+            // you don't need to cast just to add to the array
+            [mutableTFs addObject:view];
+            // typecasting works as it does in C
+            UITextField *textField = (UITextField *)view;
+            if ([self isFieldValid:textField] == NO) {
+                    return NO;
+            }
+        }
+    }
+    return YES;
+}
 
 -(IBAction)savePlayer {
     

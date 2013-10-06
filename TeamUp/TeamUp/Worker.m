@@ -16,7 +16,7 @@
     sqlite3_stmt *statement;
     
     int rating = 0;
-    int devider = 0;
+    int divider = 0;
     
     if( sqlite3_prepare_v2(db, sqlStatement, -1, &statement, NULL) == SQLITE_OK )
     {
@@ -33,11 +33,15 @@
     sqlite3_close(db);
     
     [self openDB];
-    devider = [self getNumberOfPlayers];
+    divider = [self getNumberOfPlayers];
     
-    rating = rating/devider;
+    if (divider < 0) {
+        return rating / divider;
+    }
     
-    return rating;
+    else {
+        return 0;
+    }
 }
 
 -(int)getNumberOfPlayers {
@@ -88,7 +92,7 @@
     
     NSString *sql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
                                                 "TEXT, '%@' TEXT, '%@' TEXT, '%@' INTEGER, '%@' INTEGER);", TableName,field1,field2,field3,field4,field5];
-    
+
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err)
         != SQLITE_OK) {
         
@@ -101,7 +105,6 @@
             
     }
 }
-    
 
 - (NSString *) dbPath {
     
@@ -119,7 +122,6 @@
     if (sqlite3_open([[self dbPath] UTF8String], &db) != SQLITE_OK) {
         
         sqlite3_close(db);
-        
         
     }
 }

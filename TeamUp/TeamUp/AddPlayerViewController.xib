@@ -6,11 +6,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddPlayerViewController">
             <connections>
-                <outlet property="fn" destination="1D2-f3-W7Y" id="6Wa-T0-xd5"/>
-                <outlet property="ln" destination="2ib-UU-z5a" id="vXG-Pq-5LV"/>
+                <outlet property="fn" destination="1D2-f3-W7Y" id="9Eh-V5-xec"/>
+                <outlet property="ln" destination="2ib-UU-z5a" id="YbP-Ir-Afp"/>
                 <outlet property="mr" destination="Idp-1H-5Of" id="gPo-pH-wxp"/>
                 <outlet property="picker" destination="mpb-bh-D7J" id="5Zg-pi-QVh"/>
                 <outlet property="rating" destination="m7n-dF-MEv" id="Xei-D9-Z7N"/>
+                <outlet property="savePlayerButton" destination="yH4-RC-kUt" id="rJ5-Ph-gAz"/>
                 <outlet property="stepper" destination="zaI-ok-hpg" id="7nV-Fe-13L"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -29,18 +30,27 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="validateField:" destination="-1" eventType="editingDidEnd" id="aUe-K2-2sl"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Idp-1H-5Of">
                     <rect key="frame" x="117" y="197" width="183" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <connections>
+                        <action selector="validateField:" destination="-1" eventType="editingDidEnd" id="0gb-lR-dnR"/>
+                    </connections>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1D2-f3-W7Y">
                     <rect key="frame" x="117" y="110" width="183" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
+                    <connections>
+                        <action selector="validateField:" destination="-1" eventType="editingDidEnd" id="gM8-AG-ybM"/>
+                    </connections>
                 </textField>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="First name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEG-ot-Sto">
                     <rect key="frame" x="20" y="114" width="118" height="21"/>

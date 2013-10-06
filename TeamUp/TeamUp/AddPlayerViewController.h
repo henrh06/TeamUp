@@ -17,6 +17,7 @@
     IBOutlet UITextField *mr;
     IBOutlet UIPickerView *picker;
     IBOutlet UIStepper *stepper;
+    IBOutlet UIButton *savePlayerButton;
     
 }
 
@@ -24,7 +25,7 @@
 @property(nonatomic, retain) NSArray *positions;
 
 -(IBAction)savePlayer;
-- (IBAction)stepperValueChanged:(UIStepper *)sender;
-
+-(IBAction)stepperValueChanged:(UIStepper *)sender;
+-(IBAction)validateField:(id)sender;
 
 @end
