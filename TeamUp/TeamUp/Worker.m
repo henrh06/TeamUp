@@ -31,6 +31,7 @@
             p.rating = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 4)]intValue];
             
             [a addObject:p];
+    
         }
     }else {
         
