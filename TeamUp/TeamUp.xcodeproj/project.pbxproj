@@ -10,6 +10,8 @@
 		AF037FF517FF4556001BBB06 /* manageplayersbutton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF037FF317FF4556001BBB06 /* manageplayersbutton.jpg */; };
 		AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF037FF717FF4604001BBB06 /* manageteambutton.jpg */; };
 		AF0704911801F49300677B52 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0704901801F49300677B52 /* Player.m */; };
+		AF07049318020D9700677B52 /* playerbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AF07049218020D9700677B52 /* playerbg.png */; };
+		AF0704951802154A00677B52 /* playerbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0704941802154A00677B52 /* playerbg2.png */; };
 		AF33A5DC17FB531B00326520 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */; };
 		AF33A5DE17FB532500326520 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DD17FB532500326520 /* libsqlite3.dylib */; };
 		AF33A5E117FB540200326520 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33A5E017FB540200326520 /* Worker.m */; };
@@ -52,6 +54,8 @@
 		AF037FF717FF4604001BBB06 /* manageteambutton.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = manageteambutton.jpg; sourceTree = "<group>"; };
 		AF07048F1801F49300677B52 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		AF0704901801F49300677B52 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		AF07049218020D9700677B52 /* playerbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerbg.png; sourceTree = "<group>"; };
+		AF0704941802154A00677B52 /* playerbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerbg2.png; sourceTree = "<group>"; };
 		AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AF33A5DD17FB532500326520 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AF33A5DF17FB540200326520 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 		AF712CB117FDED21003A7A74 /* Imgages */ = {
 			isa = PBXGroup;
 			children = (
+				AF0704941802154A00677B52 /* playerbg2.png */,
+				AF07049218020D9700677B52 /* playerbg.png */,
 				AF037FF717FF4604001BBB06 /* manageteambutton.jpg */,
 				AF037FF317FF4556001BBB06 /* manageplayersbutton.jpg */,
 				AF712CBD17FDFA73003A7A74 /* buttonbg.jpg */,
@@ -293,11 +299,13 @@
 				AF712CBE17FDFA73003A7A74 /* buttonbg.jpg in Resources */,
 				AF037FF517FF4556001BBB06 /* manageplayersbutton.jpg in Resources */,
 				AF509DB317FB49B10083B3D4 /* Images.xcassets in Resources */,
+				AF07049318020D9700677B52 /* playerbg.png in Resources */,
 				AF712CB517FDF1E2003A7A74 /* logo.png in Resources */,
 				AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */,
 				AF712CBC17FDF8C2003A7A74 /* createplayer.png in Resources */,
 				AF712CB017FDEBA4003A7A74 /* PlayersViewController.xib in Resources */,
 				AF509DA517FB49B10083B3D4 /* InfoPlist.strings in Resources */,
+				AF0704951802154A00677B52 /* playerbg2.png in Resources */,
 				AF509DAE17FB49B10083B3D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

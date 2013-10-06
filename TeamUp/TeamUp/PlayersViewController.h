@@ -9,11 +9,14 @@
 #import <UIKit/UIKit.h>
 #import "AddPlayerViewController.h"
 #import "Player.h"
+#import "ViewController.h"
 
 @interface PlayersViewController : UIViewController {
     
 }
 
 -(IBAction)goToAdd;
+
+-(IBAction)goToStart;
 
 @end

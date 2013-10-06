@@ -66,12 +66,12 @@
     [self openDB];
     divider = [self getNumberOfPlayers];
     
-    if (divider < 0) {
+    if (divider > 0) {
         
-        rating = rating / divider;
+        rating = rating / divider; 
     }
     
-        return divider;
+        return rating;
 }
 
 -(int)getNumberOfPlayers {
