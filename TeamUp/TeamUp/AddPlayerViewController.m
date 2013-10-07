@@ -136,10 +136,6 @@
     int rat = [rating.text intValue];
     int mobile = [mr.text intValue];
     
-  
-    
-    
-    
     Worker *w = [[Worker alloc]init];
     
     [w openDB];

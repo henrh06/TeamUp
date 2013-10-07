@@ -51,8 +51,9 @@
     for (Player * object in a) {
         
         NSString *f = object.firstName;
+
         NSString *dev = @" ";
-        NSString *l = object.LastName;
+        NSString *l = object.lastName;
         NSString *f1 = [f stringByAppendingString:dev];
         NSString *fullName = [f1 stringByAppendingString:l];
         

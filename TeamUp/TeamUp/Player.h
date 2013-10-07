@@ -11,7 +11,7 @@
 @interface Player : NSObject
 
 @property(nonatomic, retain) NSString *firstName;
-@property(nonatomic, retain)NSString *LastName;
+@property(nonatomic, retain)NSString *lastName;
 @property(nonatomic, retain)NSString *position;
 @property int rating;
 @property int number;

@@ -14,7 +14,6 @@
     
     NSMutableArray *a = [[NSMutableArray alloc]init];
     
-    
     const char* sqlStatement = "SELECT * FROM Players";
     sqlite3_stmt *statement;
     
@@ -24,9 +23,10 @@
         while (sqlite3_step(statement) == SQLITE_ROW) {
             
             Player *p = [[Player alloc]init];
-            p.firstName = [NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 0)];
-            p.LastName = [NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 1)];
-            p.position = [NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 2)];
+            // Firstname, lastname and position as UTF8 string for unicode characters
+            p.firstName = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 0)];
+            p.lastName = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)];
+            p.position = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)];
             p.number = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 3)]intValue];
             p.rating = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 4)]intValue];
             
