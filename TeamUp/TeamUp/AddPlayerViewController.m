@@ -43,6 +43,8 @@
     
     mr.keyboardType = UIKeyboardTypeNumberPad;
     
+    selectedRow = [positions objectAtIndex:0];
+    
 }
 
 - (IBAction)stepperValueChanged:(UIStepper *)sender
