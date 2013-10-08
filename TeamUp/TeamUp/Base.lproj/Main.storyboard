@@ -42,6 +42,9 @@
                                 <state key="normal" image="manageteambutton.jpg">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToTeam" destination="vXZ-lx-hvc" eventType="touchUpInside" id="jHZ-CP-8EL"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="01" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9A-lF-wzE">
                                 <rect key="frame" x="20" y="199" width="124" height="143"/>

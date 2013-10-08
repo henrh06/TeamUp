@@ -38,6 +38,10 @@
 		AF712CBA17FDF61A003A7A74 /* AddPlayerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF712CB817FDF61A003A7A74 /* AddPlayerViewController.xib */; };
 		AF712CBC17FDF8C2003A7A74 /* createplayer.png in Resources */ = {isa = PBXBuildFile; fileRef = AF712CBB17FDF8C2003A7A74 /* createplayer.png */; };
 		AF712CBE17FDFA73003A7A74 /* buttonbg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF712CBD17FDFA73003A7A74 /* buttonbg.jpg */; };
+		AFF47A2F1804929A00F0E9A6 /* TeamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF47A2D1804929A00F0E9A6 /* TeamViewController.m */; };
+		AFF47A301804929A00F0E9A6 /* TeamViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */; };
+		AFF47A36180493DD00F0E9A6 /* icerink.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF47A35180493DD00F0E9A6 /* icerink.png */; };
+		AFF47A381804950E00F0E9A6 /* positionbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AFF47A371804950E00F0E9A6 /* positionbg.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +95,11 @@
 		AF712CB817FDF61A003A7A74 /* AddPlayerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddPlayerViewController.xib; sourceTree = "<group>"; };
 		AF712CBB17FDF8C2003A7A74 /* createplayer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = createplayer.png; sourceTree = "<group>"; };
 		AF712CBD17FDFA73003A7A74 /* buttonbg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = buttonbg.jpg; sourceTree = "<group>"; };
+		AFF47A2C1804929A00F0E9A6 /* TeamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamViewController.h; sourceTree = "<group>"; };
+		AFF47A2D1804929A00F0E9A6 /* TeamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamViewController.m; sourceTree = "<group>"; };
+		AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TeamViewController.xib; sourceTree = "<group>"; };
+		AFF47A35180493DD00F0E9A6 /* icerink.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icerink.png; sourceTree = "<group>"; };
+		AFF47A371804950E00F0E9A6 /* positionbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = positionbg.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +182,9 @@
 				AF712CB817FDF61A003A7A74 /* AddPlayerViewController.xib */,
 				AF07048F1801F49300677B52 /* Player.h */,
 				AF0704901801F49300677B52 /* Player.m */,
+				AFF47A2C1804929A00F0E9A6 /* TeamViewController.h */,
+				AFF47A2D1804929A00F0E9A6 /* TeamViewController.m */,
+				AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */,
 			);
 			path = TeamUp;
 			sourceTree = "<group>";
@@ -209,6 +221,8 @@
 		AF712CB117FDED21003A7A74 /* Imgages */ = {
 			isa = PBXGroup;
 			children = (
+				AFF47A371804950E00F0E9A6 /* positionbg.png */,
+				AFF47A35180493DD00F0E9A6 /* icerink.png */,
 				AF0704941802154A00677B52 /* playerbg2.png */,
 				AF07049218020D9700677B52 /* playerbg.png */,
 				AF037FF717FF4604001BBB06 /* manageteambutton.jpg */,
@@ -300,6 +314,7 @@
 				AF712CBA17FDF61A003A7A74 /* AddPlayerViewController.xib in Resources */,
 				AF712CB317FDED37003A7A74 /* bg.jpg in Resources */,
 				AF712CBE17FDFA73003A7A74 /* buttonbg.jpg in Resources */,
+				AFF47A36180493DD00F0E9A6 /* icerink.png in Resources */,
 				AF037FF517FF4556001BBB06 /* manageplayersbutton.jpg in Resources */,
 				AF509DB317FB49B10083B3D4 /* Images.xcassets in Resources */,
 				AF07049318020D9700677B52 /* playerbg.png in Resources */,
@@ -307,9 +322,11 @@
 				AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */,
 				AF712CBC17FDF8C2003A7A74 /* createplayer.png in Resources */,
 				AF712CB017FDEBA4003A7A74 /* PlayersViewController.xib in Resources */,
+				AFF47A301804929A00F0E9A6 /* TeamViewController.xib in Resources */,
 				AF509DA517FB49B10083B3D4 /* InfoPlist.strings in Resources */,
 				AF0704951802154A00677B52 /* playerbg2.png in Resources */,
 				AF509DAE17FB49B10083B3D4 /* Main.storyboard in Resources */,
+				AFF47A381804950E00F0E9A6 /* positionbg.png in Resources */,
 				6D7A94541804548D00239902 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -334,6 +351,7 @@
 				AF33A5E117FB540200326520 /* Worker.m in Sources */,
 				AF509DAB17FB49B10083B3D4 /* AppDelegate.m in Sources */,
 				AF509DA717FB49B10083B3D4 /* main.m in Sources */,
+				AFF47A2F1804929A00F0E9A6 /* TeamViewController.m in Sources */,
 				AF0704911801F49300677B52 /* Player.m in Sources */,
 				AF712CB917FDF61A003A7A74 /* AddPlayerViewController.m in Sources */,
 			);
