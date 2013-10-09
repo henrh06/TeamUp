@@ -151,6 +151,14 @@
 
 }
 
+-(IBAction)backToPlayersView {
+    
+    PlayersViewController *screen = [[PlayersViewController alloc]initWithNibName:Nil bundle:Nil];
+    screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:screen animated:YES completion:nil];
+    
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

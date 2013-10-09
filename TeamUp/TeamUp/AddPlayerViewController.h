@@ -29,5 +29,6 @@
 -(IBAction)savePlayer;
 -(IBAction)stepperValueChanged:(UIStepper *)sender;
 -(IBAction)validateField:(id)sender;
+-(IBAction)backToPlayersView;
 
 @end

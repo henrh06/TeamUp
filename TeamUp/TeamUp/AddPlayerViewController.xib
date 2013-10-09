@@ -113,7 +113,7 @@
                     </connections>
                 </pickerView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="createplayer.png" translatesAutoresizingMaskIntoConstraints="NO" id="aVw-kC-M5c">
-                    <rect key="frame" x="65" y="12" width="204" height="85"/>
+                    <rect key="frame" x="50" y="9" width="204" height="85"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 </imageView>
                 <stepper opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="zaI-ok-hpg">
@@ -133,6 +133,16 @@
                     </state>
                     <connections>
                         <action selector="savePlayer" destination="-1" eventType="touchUpInside" id="8Ls-iq-OEj"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HgY-Zf-U23">
+                    <rect key="frame" x="254" y="30" width="46" height="43"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Back">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="backToPlayersView" destination="-1" eventType="touchUpInside" id="R0H-Xc-hYq"/>
                     </connections>
                 </button>
             </subviews>
