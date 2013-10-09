@@ -66,6 +66,10 @@
     if (mr.isFirstResponder) {
         [mr resignFirstResponder];
     }
+    
+    if (em.isFirstResponder) {
+        [em resignFirstResponder];
+    }
     [savePlayerButton setEnabled:[self validateForm]];
     
 }

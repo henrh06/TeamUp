@@ -78,7 +78,7 @@
                     <rect key="frame" x="117" y="211" width="183" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                    <textInputTraits key="textInputTraits"/>
                     <connections>
                         <action selector="validateField:" destination="-1" eventType="editingDidEnd" id="Exi-gQ-Wjp"/>
                     </connections>
