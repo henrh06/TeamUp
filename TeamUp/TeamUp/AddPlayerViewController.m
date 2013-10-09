@@ -116,6 +116,7 @@
 
 // Loop all textfields and return YES if all are valid
 -(BOOL) validateForm {
+    NSLog(@"Validate Form!");
     NSMutableArray *mutableTFs = [[NSMutableArray alloc] init];
     for (UIView *view in [self.view subviews]) {
         if ([view isKindOfClass:[UITextField class]]) {

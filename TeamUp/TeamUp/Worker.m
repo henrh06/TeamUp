@@ -118,6 +118,8 @@
     
     //Creates the tables
     //Creates check to prevent table being created when table exists
+
+        NSArray *col = [[NSArray alloc]initWithObjects:@"Players",@"FirstName",@"SecondName",@"Position",@"Number",@"Rating",@"Goals",@"Assists",@"Penalty",@"Attribute",@"Line", nil];
     
     char *err;
     
@@ -132,7 +134,7 @@
         
     } else {
             
-            NSLog(@"Table createation method run successfully. Doesnt mean a new table was created.");
+            NSLog(@"Table creation method run successfully. Doesnt mean a new table was created.");
             
     }
 }

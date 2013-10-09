@@ -39,6 +39,13 @@
     [self presentViewController:screen animated:YES completion:nil];
 }
 
+-(IBAction)goToTeam {
+    
+    TeamViewController *screen = [[TeamViewController alloc]initWithNibName:Nil bundle:Nil];
+    screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:screen animated:YES completion:nil];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
