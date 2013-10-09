@@ -25,7 +25,7 @@
     
     [w openDB];
     
-    [w createTable:@"Players" f1:@"FirstName" f2:@"SecondName" f3:@"Position" f4:@"Number" f5:@"Rating"];
+    [w createTable:@"Players" f1:@"FirstName" f2:@"SecondName" f3:@"Position" f4:@"Number" f5:@"Rating" f6:@"Email"];
     
     nrPlayers.text = [NSString stringWithFormat:@"%d",[w getNumberOfPlayers]];
     [w openDB];

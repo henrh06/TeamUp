@@ -15,6 +15,7 @@
 @property(nonatomic, retain)NSString *position;
 @property int rating;
 @property int number;
+@property(nonatomic, retain)NSString *email;
 
 
 @end

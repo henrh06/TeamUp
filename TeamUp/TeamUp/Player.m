@@ -9,6 +9,6 @@
 #import "Player.h"
 
 @implementation Player
-@synthesize firstName,lastName,rating,position,number;
+@synthesize firstName,lastName,rating,position,number,email;
 
 @end

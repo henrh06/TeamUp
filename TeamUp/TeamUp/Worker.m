@@ -29,6 +29,7 @@
             p.position = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 2)];
             p.number = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 3)]intValue];
             p.rating = [[NSString stringWithFormat:@"%s",sqlite3_column_text(statement, 4)]intValue];
+            p.email = [NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 5)];
             
             [a addObject:p];
     
@@ -97,9 +98,9 @@
     return count;
 }
 
--(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating {
+-(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating em:(NSString *)Email {
     
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO Players ('FirstName','SecondName','Position','Number','Rating') VALUES ('%@','%@','%@','%d','%d')",FirstName,LastName,position,mobileNr,rating];
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO Players ('FirstName','SecondName','Position','Number','Rating','Email') VALUES ('%@','%@','%@','%d','%d','%@')",FirstName,LastName,position,mobileNr,rating,Email];
     char *err;
     
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK ) {
@@ -113,7 +114,7 @@
     }
 }
 
-- (void)createTable: (NSString *)TableName f1:(NSString *) field1 f2:(NSString *)field2 f3:(NSString *)field3 f4:(NSString *)field4 f5:(NSString *)field5 {
+- (void)createTable: (NSString *)TableName f1:(NSString *) field1 f2:(NSString *)field2 f3:(NSString *)field3 f4:(NSString *)field4 f5:(NSString *)field5 f6:(NSString *)field6 {
     
     //Creates the tables
     //Creates check to prevent table being created when table exists
@@ -121,7 +122,7 @@
     char *err;
     
     NSString *sql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
-                                                "TEXT, '%@' TEXT, '%@' TEXT, '%@' INTEGER, '%@' INTEGER);", TableName,field1,field2,field3,field4,field5];
+                                                "TEXT, '%@' TEXT, '%@' TEXT, '%@' INTEGER, '%@' INTEGER, '%@' TEXT);", TableName,field1,field2,field3,field4,field5,field6];
 
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err)
         != SQLITE_OK) {

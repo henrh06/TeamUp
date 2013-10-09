@@ -15,6 +15,7 @@
     IBOutlet UITextField *fn;
     IBOutlet UITextField *ln;
     IBOutlet UITextField *mr;
+    IBOutlet UITextField *em;
     IBOutlet UIPickerView *picker;
     IBOutlet UIStepper *stepper;
     IBOutlet UIButton *savePlayerButton;

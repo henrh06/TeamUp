@@ -137,12 +137,13 @@
     NSString *lastName = ln.text;
     int rat = [rating.text intValue];
     int mobile = [mr.text intValue];
+    NSString *email = em.text;
     
     Worker *w = [[Worker alloc]init];
     
     [w openDB];
     
-    [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedRow mr:mobile r:rat];
+    [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedRow mr:mobile r:rat em:email];
     
     PlayersViewController *screen = [[PlayersViewController alloc]initWithNibName:Nil bundle:Nil];
     screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
