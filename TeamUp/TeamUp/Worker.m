@@ -113,15 +113,17 @@
     }
 }
 
-- (void)createTable: (NSString *)TableName f1:(NSString *) field1 f2:(NSString *)field2 f3:(NSString *)field3 f4:(NSString *)field4 f5:(NSString *)field5 {
+- (void)createTable {
     
     //Creates the tables
     //Creates check to prevent table being created when table exists
+
+        NSArray *col = [[NSArray alloc]initWithObjects:@"Players",@"FirstName",@"SecondName",@"Position",@"Number",@"Rating",@"Goals",@"Assists",@"Penalty",@"Attribute",@"Line", nil];
     
     char *err;
     
     NSString *sql = [NSString stringWithFormat:@"CREATE TABLE IF NOT EXISTS '%@' ('%@' "
-                                                "TEXT, '%@' TEXT, '%@' TEXT, '%@' INTEGER, '%@' INTEGER);", TableName,field1,field2,field3,field4,field5];
+                                                "TEXT, '%@' TEXT, '%@' TEXT, '%@' INTEGER, '%@' INTEGER, '%@' INTEGER, '%@' INTEGER, '%@' INTEGER, '%@' TEXT, '%@' INTEGER);", [col objectAtIndex:0],[col objectAtIndex:1],[col objectAtIndex:2],[col objectAtIndex:3],[col objectAtIndex:4],[col objectAtIndex:5],[col objectAtIndex:6],[col objectAtIndex:7],[col objectAtIndex:8],[col objectAtIndex:9],[col objectAtIndex:10]];
 
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err)
         != SQLITE_OK) {

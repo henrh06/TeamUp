@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "Worker.h"
 #import "PlayersViewController.h"
+#import "TeamViewController.h"
+
 @interface ViewController : UIViewController {
     
     
@@ -18,5 +20,6 @@
 @property(nonatomic, retain)IBOutlet UILabel *rating;
 
 -(IBAction)goToPlayer;
+-(IBAction)goToTeam;
 
 @end
