@@ -13,6 +13,7 @@
 		AF0704911801F49300677B52 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0704901801F49300677B52 /* Player.m */; };
 		AF07049318020D9700677B52 /* playerbg.png in Resources */ = {isa = PBXBuildFile; fileRef = AF07049218020D9700677B52 /* playerbg.png */; };
 		AF0704951802154A00677B52 /* playerbg2.png in Resources */ = {isa = PBXBuildFile; fileRef = AF0704941802154A00677B52 /* playerbg2.png */; };
+		AF2B985B1807566600B7E28F /* PlayerWorkflow.m in Sources */ = {isa = PBXBuildFile; fileRef = AF2B985A1807566600B7E28F /* PlayerWorkflow.m */; };
 		AF33A5DC17FB531B00326520 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */; };
 		AF33A5DE17FB532500326520 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DD17FB532500326520 /* libsqlite3.dylib */; };
 		AF33A5E117FB540200326520 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33A5E017FB540200326520 /* Worker.m */; };
@@ -62,6 +63,8 @@
 		AF0704901801F49300677B52 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		AF07049218020D9700677B52 /* playerbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerbg.png; sourceTree = "<group>"; };
 		AF0704941802154A00677B52 /* playerbg2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playerbg2.png; sourceTree = "<group>"; };
+		AF2B98591807566600B7E28F /* PlayerWorkflow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerWorkflow.h; sourceTree = "<group>"; };
+		AF2B985A1807566600B7E28F /* PlayerWorkflow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerWorkflow.m; sourceTree = "<group>"; };
 		AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.0.dylib; path = usr/lib/libsqlite3.0.dylib; sourceTree = SDKROOT; };
 		AF33A5DD17FB532500326520 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AF33A5DF17FB540200326520 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 				AFF47A2C1804929A00F0E9A6 /* TeamViewController.h */,
 				AFF47A2D1804929A00F0E9A6 /* TeamViewController.m */,
 				AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */,
+				AF2B98591807566600B7E28F /* PlayerWorkflow.h */,
+				AF2B985A1807566600B7E28F /* PlayerWorkflow.m */,
 			);
 			path = TeamUp;
 			sourceTree = "<group>";
@@ -347,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF509DB117FB49B10083B3D4 /* ViewController.m in Sources */,
+				AF2B985B1807566600B7E28F /* PlayerWorkflow.m in Sources */,
 				AF712CAF17FDEBA4003A7A74 /* PlayersViewController.m in Sources */,
 				AF33A5E117FB540200326520 /* Worker.m in Sources */,
 				AF509DAB17FB49B10083B3D4 /* AppDelegate.m in Sources */,

@@ -6,6 +6,22 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TeamViewController">
             <connections>
+                <outlet property="c1" destination="b84-tR-y9X" id="p6X-vU-Us6"/>
+                <outlet property="c2" destination="hai-sr-zLk" id="axb-Ba-eYW"/>
+                <outlet property="c3" destination="8vE-yc-BsB" id="JZx-cd-yGd"/>
+                <outlet property="goalie" destination="HQK-Dw-WBq" id="n02-SI-aLn"/>
+                <outlet property="lb1" destination="uAZ-Z2-HfJ" id="zvI-Kt-kzG"/>
+                <outlet property="lb2" destination="Yxc-xE-tMg" id="veV-Xy-Izb"/>
+                <outlet property="lb3" destination="Tj0-JJ-j4H" id="xaS-BW-HyO"/>
+                <outlet property="lw1" destination="fwE-IB-Paw" id="Rsc-nx-SeK"/>
+                <outlet property="lw2" destination="Swh-ws-vmE" id="5V8-nV-RqS"/>
+                <outlet property="lw3" destination="oOQ-ad-6Hn" id="cQ5-GR-6nc"/>
+                <outlet property="rb1" destination="1DU-19-9e9" id="VI6-UC-OKV"/>
+                <outlet property="rb2" destination="LnO-Xx-9Nw" id="kI6-D3-HuW"/>
+                <outlet property="rb3" destination="LnO-Xx-9Nw" id="B0K-uD-EmI"/>
+                <outlet property="rw1" destination="Qfm-8q-RTA" id="XJn-Gy-A78"/>
+                <outlet property="rw2" destination="VbG-62-kkT" id="GvA-pM-Avy"/>
+                <outlet property="rw3" destination="v5p-re-Ba4" id="vQa-L7-K9K"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -53,7 +69,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectPlayer:" destination="-1" eventType="touchUpInside" id="0yn-nC-8BP"/>
+                        <action selector="selectPositionToSetPlayer:" destination="-1" eventType="touchUpInside" id="EJR-1t-qRQ"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BVB-zN-GcZ">
@@ -65,7 +81,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectPlayer:" destination="-1" eventType="touchUpInside" id="FSg-bi-VIj"/>
+                        <action selector="selectPositionToSetPlayer:" destination="-1" eventType="touchUpInside" id="8gp-90-bdk"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a3u-xz-WwW">
@@ -77,7 +93,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectPlayer:" destination="-1" eventType="touchUpInside" id="p5i-FN-5r5"/>
+                        <action selector="selectPositionToSetPlayer:" destination="-1" eventType="touchUpInside" id="MDo-o1-PdR"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="imc-Ee-mK9">
@@ -89,7 +105,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectPlayer:" destination="-1" eventType="touchUpInside" id="QfM-RV-aKI"/>
+                        <action selector="selectPositionToSetPlayer:" destination="-1" eventType="touchUpInside" id="nQR-eJ-ngD"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f4F-kO-WXX" userLabel="right winger">
@@ -101,7 +117,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectPlayer:" destination="-1" eventType="touchUpInside" id="Z2j-7T-JsX"/>
+                        <action selector="selectPositionToSetPlayer:" destination="-1" eventType="touchUpInside" id="Ugu-PV-zpt"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yp7-Zf-ZhL">
@@ -114,7 +130,7 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="selectPlayer:" destination="-1" eventType="touchUpInside" id="GZQ-Nn-fU4"/>
+                        <action selector="selectPositionToSetPlayer:" destination="-1" eventType="touchUpInside" id="KmX-8m-9Km"/>
                     </connections>
                 </button>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Espen Pedersen" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1DU-19-9e9">
