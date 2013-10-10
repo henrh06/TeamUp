@@ -15,13 +15,15 @@
     sqlite3 *db;
 }
 
+-(void)updatePlayerInTeamView:(Player *)player l:(int)line p:(NSString *)position;
+
 - (NSArray *)getAllPlayersInList;
 
 - (void)createTable;
 
 - (void) openDB;
 
--(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating em:(NSString *)Email;
+-(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating em:(NSString *)Email l:(int)line ;
 
 -(int)getNumberOfPlayers;
 

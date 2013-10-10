@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Player : NSObject
+@interface Player : NSObject {
+    
+    NSString *firstName;
+    NSString *lastName;
+    NSString *position;
+    
+}
 
 @property(nonatomic, retain) NSString *firstName;
 @property(nonatomic, retain)NSString *lastName;

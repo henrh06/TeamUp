@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
+#import "Worker.h"
 
 @interface TeamViewController : UIViewController {
     
 }
 
 -(IBAction)goBack;
+
+- (IBAction)selectPlayer:(id)sender;
+
 
 @end

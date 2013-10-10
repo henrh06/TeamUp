@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    
 }
 
 -(IBAction)goBack {
@@ -38,6 +40,15 @@
     vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     
     [self presentViewController:vc animated:YES completion:nil];
+}
+
+- (IBAction)selectPlayer:(UIButton *)sender {
+    
+    NSString *bTitle = sender.titleLabel.text;
+    
+    NSLog(@"Button title:");
+    
+    NSLog(bTitle);
 }
 
 - (void)didReceiveMemoryWarning

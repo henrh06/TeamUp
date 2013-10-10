@@ -98,9 +98,37 @@
     return count;
 }
 
--(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating em:(NSString *)Email {
+-(void)updatePlayerInTeamView:(Player *)player l:(int)line p:(NSString *)position {
     
-    NSString *sql = [NSString stringWithFormat:@"INSERT INTO Players ('FirstName','SecondName','Position','Number','Rating','Email') VALUES ('%@','%@','%@','%d','%d','%@')",FirstName,LastName,position,mobileNr,rating,Email];
+/*
+ Method will take a player (based on first and lastname) and update it by first deleting it and then using the savePlayerToDb method. Method will be used inTeamViewController to assign a player a postion and line on the team.
+ */
+    
+    NSString *sqlDelete1 = [NSString stringWithFormat:@"DELETE FROM Players WHERE FirstName = '%@'",player.firstName];
+    NSString *sqlDeleteFinal = [sqlDelete1 stringByAppendingString:[NSString stringWithFormat:@" AND SecondName = '%@'",player.lastName]];
+    
+    NSLog(sqlDeleteFinal);
+    
+    char *err;
+    
+    if (sqlite3_exec(db, [sqlDeleteFinal UTF8String], NULL, NULL, &err) != SQLITE_OK ) {
+        
+        NSLog(@"To be able to update the player it first has to be deleted. Since it could not be deleted it will not be updated");
+        
+    } else {
+        
+        NSLog(@"Player deleted successfully before update. Continuing to update selected player by creating it again");
+        
+        [self savePlayerToDb:@"null" fn:player.firstName ln:player.lastName p:position mr:player.number r:player.rating em:player.email l:line];
+    }
+    
+    sqlite3_close(db);
+    
+}
+
+-(void) savePlayerToDb: (NSString *)forShow fn:(NSString *)FirstName ln:(NSString *)LastName p:(NSString *)position mr:(int)mobileNr r:(int)rating em:(NSString *)Email l:(int)line {
+    
+    NSString *sql = [NSString stringWithFormat:@"INSERT INTO Players ('FirstName','SecondName','Position','Number','Rating','Email','line') VALUES ('%@','%@','%@','%d','%d','%@','%d')",FirstName,LastName,position,mobileNr,rating,Email,line];
     char *err;
     
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK ) {

@@ -45,8 +45,10 @@
     
     int y = 0;
     
+    
     [w openDB];
     NSArray * a = [w getAllPlayersInList];
+    
     
     for (Player * object in a) {
         
@@ -79,6 +81,7 @@
         
         
     }
+     
 }
 
 -(IBAction)goToStart {

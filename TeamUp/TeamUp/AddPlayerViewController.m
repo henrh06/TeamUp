@@ -148,7 +148,7 @@
     
     [w openDB];
     
-    [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedRow mr:mobile r:rat em:email];
+    [w savePlayerToDb:@"Skoyter" fn:firstName ln:lastName p:selectedRow mr:mobile r:rat em:email l:0];
     
     PlayersViewController *screen = [[PlayersViewController alloc]initWithNibName:Nil bundle:Nil];
     screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
