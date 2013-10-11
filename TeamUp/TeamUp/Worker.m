@@ -19,7 +19,7 @@
     
     NSString *sql1 = [NSString stringWithFormat:@"SELECT * FROM Players WHERE Line = %d",line];
     NSString *sql2 = [sql1 stringByAppendingString:[NSString stringWithFormat:@" AND Position = '%@'",position]];
-    NSString *sqlFinal = [sql2 stringByAppendingString:@"ORDER BY FirstName DESC LIMIT 1;"];
+    NSString *sqlFinal = [sql2 stringByAppendingString:@"ORDER BY FirstName ASC LIMIT 1;"];
     const char *sql = [sqlFinal UTF8String];
     
     NSMutableString *pName = [NSMutableString stringWithString:@"Not set"];
