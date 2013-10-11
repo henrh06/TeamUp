@@ -15,6 +15,8 @@
     sqlite3 *db;
 }
 
+- (NSString *)returnPlayerWithNameToPositionAndLine:(int)line p:(NSString *)position;
+
 -(void)updatePlayerInTeamView:(Player *)player l:(int)line p:(NSString *)position;
 
 - (NSArray *)getAllPlayersInList;

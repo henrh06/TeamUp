@@ -10,6 +10,45 @@
 
 @implementation Worker
 
+- (NSString *)returnPlayerWithNameToPositionAndLine:(int)line p:(NSString *)position {
+    
+/*
+ Method for returning a player for a specific line and position. Ment for the UILabels in TeamViewController.
+ Takes line and position (from specific label) and returns a players namefrom db table. Adds linenumber to Name string for visual effect on the text string. If the method cannot find any users for position and line it will return the string "Not set"
+ */
+    
+    NSString *sql1 = [NSString stringWithFormat:@"SELECT * FROM Players WHERE Line = %d",line];
+    NSString *sql2 = [sql1 stringByAppendingString:[NSString stringWithFormat:@" AND Position = '%@'",position]];
+    NSString *sqlFinal = [sql2 stringByAppendingString:@"ORDER BY FirstName DESC LIMIT 1;"];
+    const char *sql = [sqlFinal UTF8String];
+    
+    NSMutableString *pName = [NSMutableString stringWithString:@"Not set"];
+    sqlite3_stmt *statement;
+    
+    if( sqlite3_prepare_v2(db, sql, -1, &statement, NULL) == SQLITE_OK ) {
+        
+    NSLog(@"Sql success while trying to retrieve player. Continuing to set Player if sql returns anything");
+        
+        while (sqlite3_step(statement) == SQLITE_ROW) {
+            NSString *l = [NSString stringWithFormat:@"%d",line];
+            NSString *a = [l stringByAppendingString:[NSString stringWithFormat:@". %@",[NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 0)]]];
+            NSString *s = [a stringByAppendingString:[NSString stringWithFormat:@" %@",[NSString stringWithUTF8String:(char *) sqlite3_column_text(statement, 1)]]];
+            pName = [NSMutableString stringWithString:s];
+            
+    }
+        }
+    
+    else {
+        
+        NSLog(@"Could not retrieve a player,sql failed.");
+        
+    }
+    
+    sqlite3_close(db);
+    
+        return pName;
+}
+
 - (NSArray *)getAllPlayersInList {
     
     NSMutableArray *a = [[NSMutableArray alloc]init];
@@ -106,8 +145,6 @@
     
     NSString *sqlDelete1 = [NSString stringWithFormat:@"DELETE FROM Players WHERE FirstName = '%@'",player.firstName];
     NSString *sqlDeleteFinal = [sqlDelete1 stringByAppendingString:[NSString stringWithFormat:@" AND SecondName = '%@'",player.lastName]];
-    
-    NSLog(sqlDeleteFinal);
     
     char *err;
     

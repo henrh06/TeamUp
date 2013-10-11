@@ -13,7 +13,7 @@
 @end
 
 @implementation TeamViewController
-@synthesize pwf,goalie,lb1,lb2,lb3,rb1,rb2,rb3,c1,c2,c3,rw1,rw2,rw3,availibleLines;
+@synthesize pwf,goalie,lb1,lb2,lb3,rb1,rb2,rb3,c1,c2,c3,rw1,rw2,rw3,availibleLines,lw1,lw2,lw3;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -30,6 +30,25 @@
     // Do any additional setup after loading the view from its nib.
     availibleLines = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",nil];
     
+    Worker *w = [[Worker alloc]init];
+    [w openDB];
+    
+    goalie.text = [w returnPlayerWithNameToPositionAndLine:1 p:@"goalie"];
+    lb1.text = [w returnPlayerWithNameToPositionAndLine:1 p:@"left back"];
+    lb2.text = [w returnPlayerWithNameToPositionAndLine:2 p:@"left back"];
+    lb3.text = [w returnPlayerWithNameToPositionAndLine:3 p:@"left back"];
+    rb1.text = [w returnPlayerWithNameToPositionAndLine:1 p:@"right back"];
+    rb2.text = [w returnPlayerWithNameToPositionAndLine:2 p:@"right back"];
+    rb3.text = [w returnPlayerWithNameToPositionAndLine:3 p:@"right back"];
+    c1.text = [w returnPlayerWithNameToPositionAndLine:1 p:@"center"];
+    c2.text = [w returnPlayerWithNameToPositionAndLine:2 p:@"center"];
+    c3.text = [w returnPlayerWithNameToPositionAndLine:3 p:@"center"];
+    rw1.text = [w returnPlayerWithNameToPositionAndLine:1 p:@"right winger"];
+    rw2.text = [w returnPlayerWithNameToPositionAndLine:2 p:@"right winger"];
+    rw3.text = [w returnPlayerWithNameToPositionAndLine:3 p:@"right winger"];
+    lw1.text = [w returnPlayerWithNameToPositionAndLine:1 p:@"left winger"];
+    lw2.text = [w returnPlayerWithNameToPositionAndLine:2 p:@"left winger"];
+    lw3.text = [w returnPlayerWithNameToPositionAndLine:3 p:@"left winger"];
     
 }
 
@@ -96,11 +115,15 @@
     [w openDB];
     [w updatePlayerInTeamView:p l:pwf.line p:pwf.position];
     
+    TeamViewController *screen = [[TeamViewController alloc]initWithNibName:Nil bundle:Nil];
+    screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:screen animated:YES completion:nil];
+    
 }
 
 -(void)createTable {
     
-    table = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height)];
+    table = [[UITableView alloc]initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height - 44)];
     table.delegate = self;
     table.dataSource = self;
     
@@ -166,7 +189,10 @@
         
         Player *p  = [a objectAtIndex:indexPath.row];
         
-        cell.textLabel.text = p.firstName;
+        NSString *fn = p.firstName;
+        NSString *fullName = [fn stringByAppendingString:[NSString stringWithFormat:@" %@",p.lastName]];
+        
+        cell.textLabel.text = fullName;
     
     } else {
         
