@@ -191,8 +191,9 @@
         
         NSString *fn = p.firstName;
         NSString *fullName = [fn stringByAppendingString:[NSString stringWithFormat:@" %@",p.lastName]];
+        NSString *fullNP = [fullName stringByAppendingString:[NSString stringWithFormat:@", %@",p.position]];
         
-        cell.textLabel.text = fullName;
+        cell.textLabel.text = fullNP;
     
     } else {
         
