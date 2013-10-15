@@ -29,11 +29,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-    
-    [self.view addGestureRecognizer:tap];
     
     availibleLines = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",nil];
     
@@ -245,12 +240,6 @@
 
 - (IBAction)goToMatchup {
     
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
-                                   initWithTarget:self
-                                   action:@selector(dismissKeyboard)];
-    
-    [self.view addGestureRecognizer:tap];
-    
     mView = [[UIView alloc]initWithFrame:CGRectMake((self.view.frame.size.width / 2) - 100, (self.view.frame.size.height / 2) - 100, 200, 100)];
     mView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
     mView.layer.cornerRadius = 5;
@@ -314,11 +303,6 @@
     
 }
 
--(void)dismissKeyboard {
-    
-    [oponant resignFirstResponder];
-    
-}
 
 
 - (void)didReceiveMemoryWarning
