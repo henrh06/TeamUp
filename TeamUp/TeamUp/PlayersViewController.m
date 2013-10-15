@@ -45,15 +45,12 @@
     
     int y = 0;
     
-    
     [w openDB];
     NSArray * a = [w getAllPlayersInList];
-    
     
     for (Player * object in a) {
         
         NSString *f = object.firstName;
-
         NSString *dev = @" ";
         NSString *l = object.lastName;
         NSString *f1 = [f stringByAppendingString:dev];
@@ -65,17 +62,27 @@
         [scroll addSubview:v];
         
         UILabel *fn = [[UILabel alloc]initWithFrame:CGRectMake(5, 5, v.frame.size.width -10, 30)];
+        [fn setFont:[UIFont fontWithName:@"Futura-Medium" size:24.0]];
         fn.text = fullName;
         fn.textColor = [UIColor whiteColor];
         [v addSubview:fn];
         
-        UILabel *pos = [[UILabel alloc]initWithFrame:CGRectMake(5, 40, 100, 30)];
+        UILabel *pos = [[UILabel alloc]initWithFrame:CGRectMake(5, 40, 100, 20)];
+        pos.textColor = [UIColor whiteColor];
         pos.text = object.position;
         [v addSubview:pos];
         
-        UILabel *rating = [[UILabel alloc]initWithFrame:CGRectMake(120, 40, 30, 30)];
-        rating.text = [NSString stringWithFormat:@"%d",object.rating];
-        [v addSubview:rating];
+        int len = 110;
+        
+        for (int x = 0; x <= object.rating; x++) {
+            
+            UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(len, 45, 15, 15)];
+            imgView.image = [UIImage imageNamed:@"Star.png"];
+            [v addSubview:imgView];
+            
+            len = len + 17;
+        }
+        
         
         y = y+100;
         
@@ -83,6 +90,7 @@
     }
      
 }
+
 
 -(IBAction)goToStart {
     

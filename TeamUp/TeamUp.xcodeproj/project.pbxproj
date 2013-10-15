@@ -17,6 +17,7 @@
 		AF33A5DC17FB531B00326520 /* libsqlite3.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DB17FB531B00326520 /* libsqlite3.0.dylib */; };
 		AF33A5DE17FB532500326520 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DD17FB532500326520 /* libsqlite3.dylib */; };
 		AF33A5E117FB540200326520 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33A5E017FB540200326520 /* Worker.m */; };
+		AF478140180DC009004B86EB /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47813F180DC009004B86EB /* Star.png */; };
 		AF509D9B17FB49B10083B3D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF509D9A17FB49B10083B3D4 /* Foundation.framework */; };
 		AF509D9D17FB49B10083B3D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF509D9C17FB49B10083B3D4 /* CoreGraphics.framework */; };
 		AF509D9F17FB49B10083B3D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF509D9E17FB49B10083B3D4 /* UIKit.framework */; };
@@ -69,6 +70,7 @@
 		AF33A5DD17FB532500326520 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AF33A5DF17FB540200326520 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
 		AF33A5E017FB540200326520 /* Worker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Worker.m; sourceTree = "<group>"; };
+		AF47813F180DC009004B86EB /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
 		AF509D9717FB49B10083B3D4 /* TeamUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF509D9A17FB49B10083B3D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF509D9C17FB49B10083B3D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -131,6 +133,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF478141180DC7B9004B86EB /* PlayerViewFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AF712CAC17FDEBA4003A7A74 /* PlayersViewController.h */,
+				AF712CAD17FDEBA4003A7A74 /* PlayersViewController.m */,
+				AF712CAE17FDEBA4003A7A74 /* PlayersViewController.xib */,
+				AF712CB617FDF61A003A7A74 /* AddPlayerViewController.h */,
+				AF712CB717FDF61A003A7A74 /* AddPlayerViewController.m */,
+				AF712CB817FDF61A003A7A74 /* AddPlayerViewController.xib */,
+			);
+			name = PlayerViewFlow;
+			sourceTree = "<group>";
+		};
+		AF478142180DC7D9004B86EB /* TeamViewFlow */ = {
+			isa = PBXGroup;
+			children = (
+				AFF47A2C1804929A00F0E9A6 /* TeamViewController.h */,
+				AFF47A2D1804929A00F0E9A6 /* TeamViewController.m */,
+				AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */,
+				AF2B98591807566600B7E28F /* PlayerWorkflow.h */,
+				AF2B985A1807566600B7E28F /* PlayerWorkflow.m */,
+			);
+			name = TeamViewFlow;
+			sourceTree = "<group>";
+		};
+		AF478143180DC7FD004B86EB /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				AF33A5DF17FB540200326520 /* Worker.h */,
+				AF33A5E017FB540200326520 /* Worker.m */,
+				AF07048F1801F49300677B52 /* Player.h */,
+				AF0704901801F49300677B52 /* Player.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
 		AF509D8E17FB49B10083B3D4 = {
 			isa = PBXGroup;
 			children = (
@@ -167,6 +205,9 @@
 		AF509DA017FB49B10083B3D4 /* TeamUp */ = {
 			isa = PBXGroup;
 			children = (
+				AF478143180DC7FD004B86EB /* DataModel */,
+				AF478142180DC7D9004B86EB /* TeamViewFlow */,
+				AF478141180DC7B9004B86EB /* PlayerViewFlow */,
 				AF712CB117FDED21003A7A74 /* Imgages */,
 				AF509DA917FB49B10083B3D4 /* AppDelegate.h */,
 				AF509DAA17FB49B10083B3D4 /* AppDelegate.m */,
@@ -175,21 +216,6 @@
 				AF509DB017FB49B10083B3D4 /* ViewController.m */,
 				AF509DB217FB49B10083B3D4 /* Images.xcassets */,
 				AF509DA117FB49B10083B3D4 /* Supporting Files */,
-				AF33A5DF17FB540200326520 /* Worker.h */,
-				AF33A5E017FB540200326520 /* Worker.m */,
-				AF712CAC17FDEBA4003A7A74 /* PlayersViewController.h */,
-				AF712CAD17FDEBA4003A7A74 /* PlayersViewController.m */,
-				AF712CAE17FDEBA4003A7A74 /* PlayersViewController.xib */,
-				AF712CB617FDF61A003A7A74 /* AddPlayerViewController.h */,
-				AF712CB717FDF61A003A7A74 /* AddPlayerViewController.m */,
-				AF712CB817FDF61A003A7A74 /* AddPlayerViewController.xib */,
-				AF07048F1801F49300677B52 /* Player.h */,
-				AF0704901801F49300677B52 /* Player.m */,
-				AFF47A2C1804929A00F0E9A6 /* TeamViewController.h */,
-				AFF47A2D1804929A00F0E9A6 /* TeamViewController.m */,
-				AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */,
-				AF2B98591807566600B7E28F /* PlayerWorkflow.h */,
-				AF2B985A1807566600B7E28F /* PlayerWorkflow.m */,
 			);
 			path = TeamUp;
 			sourceTree = "<group>";
@@ -226,6 +252,7 @@
 		AF712CB117FDED21003A7A74 /* Imgages */ = {
 			isa = PBXGroup;
 			children = (
+				AF47813F180DC009004B86EB /* Star.png */,
 				AFF47A371804950E00F0E9A6 /* positionbg.png */,
 				AFF47A35180493DD00F0E9A6 /* icerink.png */,
 				AF0704941802154A00677B52 /* playerbg2.png */,
@@ -325,6 +352,7 @@
 				AF07049318020D9700677B52 /* playerbg.png in Resources */,
 				AF712CB517FDF1E2003A7A74 /* logo.png in Resources */,
 				AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */,
+				AF478140180DC009004B86EB /* Star.png in Resources */,
 				AF712CBC17FDF8C2003A7A74 /* createplayer.png in Resources */,
 				AF712CB017FDEBA4003A7A74 /* PlayersViewController.xib in Resources */,
 				AFF47A301804929A00F0E9A6 /* TeamViewController.xib in Resources */,

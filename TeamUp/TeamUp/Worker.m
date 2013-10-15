@@ -51,6 +51,10 @@
 
 - (NSArray *)getAllPlayersInList {
     
+    /*
+     Returns a sorted (by rating) NSArray 
+     */
+    
     NSMutableArray *a = [[NSMutableArray alloc]init];
     
     const char* sqlStatement = "SELECT * FROM Players";
@@ -78,7 +82,13 @@
         NSLog(@"Couldnt read players into array from sql db");
     }
     
-    return a;    
+    NSSortDescriptor *sortDescriptor;
+    sortDescriptor = [[NSSortDescriptor alloc] initWithKey:@"rating"
+                                                 ascending:FALSE];
+    NSArray *sortDescriptors = [NSArray arrayWithObject:sortDescriptor];
+    NSArray *final = [a sortedArrayUsingDescriptors:sortDescriptors];
+    
+    return final;
 }
 
 -(int)returnTotalRating {
