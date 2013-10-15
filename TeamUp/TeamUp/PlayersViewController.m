@@ -74,7 +74,7 @@
         
         int len = 110;
         
-        for (int x = 0; x <= object.rating; x++) {
+        for (int x = 1; x <= object.rating; x++) {
             
             UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(len, 45, 15, 15)];
             imgView.image = [UIImage imageNamed:@"Star.png"];
