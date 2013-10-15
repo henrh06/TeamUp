@@ -28,6 +28,13 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
     availibleLines = [[NSArray alloc]initWithObjects:@"1",@"2",@"3",nil];
     
     Worker *w = [[Worker alloc]init];
@@ -235,6 +242,84 @@
             [self updateTeam];
         }
 }
+
+- (IBAction)goToMatchup {
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
+    mView = [[UIView alloc]initWithFrame:CGRectMake((self.view.frame.size.width / 2) - 100, (self.view.frame.size.height / 2) - 100, 200, 100)];
+    mView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"bg.jpg"]];
+    mView.layer.cornerRadius = 5;
+    mView.layer.borderWidth = 0;
+    [self.view addSubview:mView];
+    
+    oponant = [[UITextField alloc]initWithFrame:CGRectMake(5, 5, 190, 20)];
+    oponant.textAlignment = NSTextAlignmentCenter;
+    oponant.text = @"Oponant....";
+    oponant.textColor = [UIColor whiteColor];
+    [mView addSubview:oponant];
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setTitle:@"Go!" forState:UIControlStateNormal];
+    [button setBackgroundColor:[UIColor clearColor]];
+    [button addTarget:self
+    action:@selector(matchup)
+    forControlEvents:UIControlEventTouchUpInside];
+    button.frame = CGRectMake(5, 40, 80, 40.0);
+    [mView addSubview:button];
+    
+    UIButton *cancel = [UIButton buttonWithType:UIButtonTypeCustom];
+    [cancel setTitle:@"Cancel" forState:UIControlStateNormal];
+    [cancel setBackgroundColor:[UIColor clearColor]];
+    [cancel addTarget:self
+               action:@selector(cancel)
+     forControlEvents:UIControlEventTouchUpInside];
+    cancel.frame = CGRectMake(90, 40, 80, 40.0);
+    [mView addSubview:cancel];
+    
+    
+    
+}
+
+-(void)matchup {
+    
+    Singleton *sharedManager = [Singleton sharedManager];
+    
+    Matchup *m = [sharedManager match];
+    m.oponant = oponant.text;
+    
+    MatchupViewController *screen = [[MatchupViewController alloc]initWithNibName:Nil bundle:Nil];
+    screen.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentViewController:screen animated:YES completion:nil];
+    
+}
+
+-(void)cancel {
+    
+    [UIView animateWithDuration:2
+                          delay:0.0
+                        options: UIViewAnimationCurveEaseOut
+                     animations:^{
+                         
+                         mView.frame = CGRectMake(+400, (self.view.frame.size.height / 2) - 100, 200, 100);
+                     }
+                     completion:^(BOOL finished){
+                         
+                             [mView removeFromSuperview];
+                     }];
+    
+}
+
+-(void)dismissKeyboard {
+    
+    [oponant resignFirstResponder];
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {

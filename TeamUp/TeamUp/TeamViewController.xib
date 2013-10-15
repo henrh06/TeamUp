@@ -46,6 +46,9 @@
                                 <state key="normal" title="Go to matchup">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="goToMatchup" destination="-1" eventType="touchUpInside" id="zaQ-X6-QvG"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Njg-Tw-LIz"/>

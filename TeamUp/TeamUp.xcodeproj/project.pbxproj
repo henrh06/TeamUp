@@ -18,6 +18,11 @@
 		AF33A5DE17FB532500326520 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF33A5DD17FB532500326520 /* libsqlite3.dylib */; };
 		AF33A5E117FB540200326520 /* Worker.m in Sources */ = {isa = PBXBuildFile; fileRef = AF33A5E017FB540200326520 /* Worker.m */; };
 		AF478140180DC009004B86EB /* Star.png in Resources */ = {isa = PBXBuildFile; fileRef = AF47813F180DC009004B86EB /* Star.png */; };
+		AF478146180DCB0E004B86EB /* Matchup.m in Sources */ = {isa = PBXBuildFile; fileRef = AF478145180DCB0E004B86EB /* Matchup.m */; };
+		AF478149180DCD34004B86EB /* Singleton.m in Sources */ = {isa = PBXBuildFile; fileRef = AF478148180DCD34004B86EB /* Singleton.m */; };
+		AF47814C180DCF41004B86EB /* Event.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47814B180DCF41004B86EB /* Event.m */; };
+		AF478150180DDD5E004B86EB /* MatchupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF47814E180DDD5E004B86EB /* MatchupViewController.m */; };
+		AF478151180DDD5E004B86EB /* MatchupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF47814F180DDD5E004B86EB /* MatchupViewController.xib */; };
 		AF509D9B17FB49B10083B3D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF509D9A17FB49B10083B3D4 /* Foundation.framework */; };
 		AF509D9D17FB49B10083B3D4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF509D9C17FB49B10083B3D4 /* CoreGraphics.framework */; };
 		AF509D9F17FB49B10083B3D4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF509D9E17FB49B10083B3D4 /* UIKit.framework */; };
@@ -71,6 +76,15 @@
 		AF33A5DF17FB540200326520 /* Worker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Worker.h; sourceTree = "<group>"; };
 		AF33A5E017FB540200326520 /* Worker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Worker.m; sourceTree = "<group>"; };
 		AF47813F180DC009004B86EB /* Star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Star.png; sourceTree = "<group>"; };
+		AF478144180DCB0E004B86EB /* Matchup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Matchup.h; sourceTree = "<group>"; };
+		AF478145180DCB0E004B86EB /* Matchup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Matchup.m; sourceTree = "<group>"; };
+		AF478147180DCD34004B86EB /* Singleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Singleton.h; sourceTree = "<group>"; };
+		AF478148180DCD34004B86EB /* Singleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Singleton.m; sourceTree = "<group>"; };
+		AF47814A180DCF41004B86EB /* Event.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Event.h; sourceTree = "<group>"; };
+		AF47814B180DCF41004B86EB /* Event.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Event.m; sourceTree = "<group>"; };
+		AF47814D180DDD5E004B86EB /* MatchupViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchupViewController.h; sourceTree = "<group>"; };
+		AF47814E180DDD5E004B86EB /* MatchupViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchupViewController.m; sourceTree = "<group>"; };
+		AF47814F180DDD5E004B86EB /* MatchupViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MatchupViewController.xib; sourceTree = "<group>"; };
 		AF509D9717FB49B10083B3D4 /* TeamUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeamUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF509D9A17FB49B10083B3D4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AF509D9C17FB49B10083B3D4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -154,6 +168,9 @@
 				AFF47A2E1804929A00F0E9A6 /* TeamViewController.xib */,
 				AF2B98591807566600B7E28F /* PlayerWorkflow.h */,
 				AF2B985A1807566600B7E28F /* PlayerWorkflow.m */,
+				AF47814D180DDD5E004B86EB /* MatchupViewController.h */,
+				AF47814E180DDD5E004B86EB /* MatchupViewController.m */,
+				AF47814F180DDD5E004B86EB /* MatchupViewController.xib */,
 			);
 			name = TeamViewFlow;
 			sourceTree = "<group>";
@@ -165,6 +182,12 @@
 				AF33A5E017FB540200326520 /* Worker.m */,
 				AF07048F1801F49300677B52 /* Player.h */,
 				AF0704901801F49300677B52 /* Player.m */,
+				AF478144180DCB0E004B86EB /* Matchup.h */,
+				AF478145180DCB0E004B86EB /* Matchup.m */,
+				AF478147180DCD34004B86EB /* Singleton.h */,
+				AF478148180DCD34004B86EB /* Singleton.m */,
+				AF47814A180DCF41004B86EB /* Event.h */,
+				AF47814B180DCF41004B86EB /* Event.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -349,6 +372,7 @@
 				AFF47A36180493DD00F0E9A6 /* icerink.png in Resources */,
 				AF037FF517FF4556001BBB06 /* manageplayersbutton.jpg in Resources */,
 				AF509DB317FB49B10083B3D4 /* Images.xcassets in Resources */,
+				AF478151180DDD5E004B86EB /* MatchupViewController.xib in Resources */,
 				AF07049318020D9700677B52 /* playerbg.png in Resources */,
 				AF712CB517FDF1E2003A7A74 /* logo.png in Resources */,
 				AF037FF817FF4604001BBB06 /* manageteambutton.jpg in Resources */,
@@ -379,13 +403,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF47814C180DCF41004B86EB /* Event.m in Sources */,
+				AF478150180DDD5E004B86EB /* MatchupViewController.m in Sources */,
 				AF509DB117FB49B10083B3D4 /* ViewController.m in Sources */,
 				AF2B985B1807566600B7E28F /* PlayerWorkflow.m in Sources */,
 				AF712CAF17FDEBA4003A7A74 /* PlayersViewController.m in Sources */,
 				AF33A5E117FB540200326520 /* Worker.m in Sources */,
 				AF509DAB17FB49B10083B3D4 /* AppDelegate.m in Sources */,
 				AF509DA717FB49B10083B3D4 /* main.m in Sources */,
+				AF478146180DCB0E004B86EB /* Matchup.m in Sources */,
 				AFF47A2F1804929A00F0E9A6 /* TeamViewController.m in Sources */,
+				AF478149180DCD34004B86EB /* Singleton.m in Sources */,
 				AF0704911801F49300677B52 /* Player.m in Sources */,
 				AF712CB917FDF61A003A7A74 /* AddPlayerViewController.m in Sources */,
 			);

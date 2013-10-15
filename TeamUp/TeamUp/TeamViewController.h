@@ -10,10 +10,16 @@
 #import "Player.h"
 #import "Worker.h"
 #import "PlayerWorkflow.h"
+#import "Singleton.h"
+#import "Matchup.h"
+#import <QuartzCore/QuartzCore.h>
+#import "MatchupViewController.h"
 
 @interface TeamViewController : UIViewController <UITableViewDelegate, UITableViewDataSource> {
     
     UITableView *table;
+    UITextField *oponant;
+    UIView *mView;
     
     
 }
@@ -45,6 +51,8 @@
 -(IBAction)goBack;
 
 - (IBAction)selectPositionToSetPlayer:(UIButton *)sender;
+
+- (IBAction)goToMatchup;
 
 
 @end
